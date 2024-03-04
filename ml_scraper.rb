@@ -11,6 +11,13 @@ class MlScraper
     end
 
     def scrape
-        
+       ScrapingOrganizer.call(
+        driver: @driver,
+        wait: @wait,
+        search_str: @search_str
+       )
+       @driver.quit
     end
 end
+
+MLScraper.new.scrape
