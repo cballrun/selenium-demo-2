@@ -20,4 +20,4 @@ class MlScraper
     end
 end
 
-# MlScraper.new.scrape
+MlScraper.new.scrape

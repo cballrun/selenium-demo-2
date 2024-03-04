@@ -12,8 +12,9 @@ class SearchItem
 
     def fill_form(driver, wait, search_str)
         search_input = wait.until do
-            driver.find_element(:css, 'body > header > div > form > input')
+            driver.find_element(:css, "input")
         end
+        search_input.send_keys search_str
     end
 end
 
