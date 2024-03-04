@@ -7,7 +7,7 @@ class MlScraper
         @driver = Selenium::WebDriver.for :chrome
         @search_str = "carros 4x4 diesel"
         @driver.get "https://www.mercadolibre.com.co"
-        @wait - Selenium::WebDriver::wait.new(timeout: 10)
+        @wait = Selenium::WebDriver::Wait.new(timeout: 10)
     end
 
     def scrape
@@ -20,4 +20,4 @@ class MlScraper
     end
 end
 
-MLScraper.new.scrape
+# MlScraper.new.scrape
